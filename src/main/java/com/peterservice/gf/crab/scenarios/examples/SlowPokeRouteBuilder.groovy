@@ -29,6 +29,7 @@ class SlowPokeRouteBuilder extends RouteBuilder {
                // .delay(exchangeProperty("ps.crab.context.waittime"))
                 .to("http4://hexhost")
                 .setHeader("ps.crab.result.description", simple("body hex: \${body}"))
+                .setHeader("ps.crab.description", simple("body hex: \${body}"))
                 .to("crab:success")
 
     }
